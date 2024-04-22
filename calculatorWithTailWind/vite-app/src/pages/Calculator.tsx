@@ -7,9 +7,10 @@ import { FaAngleRight } from "react-icons/fa";
 import { FaAngleLeft } from "react-icons/fa";
 
 const Calculator = () => {
-  const [expression, setExpression] = useState<any>();
+  const [expression, setExpression] = useState<any>("");
   const buttonClick = (value: any) => {
     setExpression((el: any) => el + value);
+    console.log(expression);
   };
 
   const calculate = () => {
@@ -28,13 +29,13 @@ const Calculator = () => {
     setExpression(expression / 100);
   };
 
-  const approx = () => {
-    setExpression(Math.round(expression));
-  };
+  // const approx = () => {
+  //   setExpression(Math.round(expression));
+  // };
 
-  const sqrt = () => {
-    setExpression(Math.sqrt(expression));
-  };
+  // const sqrt = () => {
+  //   setExpression(Math.sqrt(expression));
+  // };
   return (
     <div className="mx-[55px] my-[20px] ">
       <div className="w-[235px] min-h-[320px] border-[0.5px] rounded-[8px]  shadow-[black 20px] border-[black] ">
